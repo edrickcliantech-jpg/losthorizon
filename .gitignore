@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------------------
+# This is a WordPress install. Only hand-written code is tracked; WordPress
+# core, the bundled default themes, uploads and local config are not.
+#
+# Each directory level must be un-ignored before git will descend into it,
+# hence the alternating ignore/un-ignore pairs below.
+# ---------------------------------------------------------------------------
+
+# Ignore every top-level entry by default: core files (wp-admin, wp-includes,
+# wp-*.php), bundled themes, wp-config.php, .htaccess, error.txt, license.txt.
+/*
+
+# ...then carve out only the path down to the custom plugin.
+!/wp-content/
+/wp-content/*
+!/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/admin-sidebar-customizer/
+
+# Local/editor cruft inside the plugin.
+/wp-content/plugins/admin-sidebar-customizer/node_modules/
+/wp-content/plugins/admin-sidebar-customizer/.DS_Store
+/wp-content/plugins/admin-sidebar-customizer/*.log
+
+# Always keep the ignore rules themselves under version control.
+# NB: git will not honour this line for .gitignore itself, so it is force-added
+# on the initial commit (`git add -f .gitignore`). Once tracked it stays tracked.
+/.gitignore
