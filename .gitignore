@@ -22,7 +22,9 @@
 /wp-content/plugins/admin-sidebar-customizer/.DS_Store
 /wp-content/plugins/admin-sidebar-customizer/*.log
 
-# Always keep the ignore rules themselves under version control.
-# NB: git will not honour this line for .gitignore itself, so it is force-added
-# on the initial commit (`git add -f .gitignore`). Once tracked it stays tracked.
+# Keep the repo's own documentation and ignore rules under version control.
+!/README.md
 /.gitignore
+# NB: git will not honour an un-ignore line for .gitignore itself, so it was
+# force-added on the initial commit (`git add -f .gitignore`). Once a file is
+# tracked, ignore rules no longer apply to it.
